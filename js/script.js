@@ -67,3 +67,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// connect to the google sheet
+const contactForm = document.getElementById("contactForm");
+contactForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    let formData = new FormData(this);
+
+    fetch('https://script.google.com/macros/s/AKfycbwVPLwDcCw0BZWdNo8Rj1SW_oLX6PFDYciqbfdVibo5r8oJgGnCYx_XrxtO-Zv6-Qiv/exec', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+   
+    window.alert("Form submitted successfully!"); // Show alert box
+    contactForm.querySelector('[name="Message"]').value = '';
+    contactForm.querySelector('[name="Name"]').value = '';
+    contactForm.querySelector('[name="Email"]').value = '';
+    contactForm.querySelector('[name="Subject"]').value = '';
+    contactForm.querySelector('[name="Number"]').value = '';
+   
+});
+
+
