@@ -1,1 +1,1 @@
-Link: https://vaibhavshukla8318.github.io/portfolio_website/
+Link: https://personal-portfolio8318.netlify.app/
