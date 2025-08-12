@@ -235,9 +235,9 @@ section{
 .home-sci{
     position: absolute;
     bottom: 4rem;
-    width: 170px;
+    width: 180px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .home-sci a {
@@ -255,6 +255,7 @@ section{
     z-index: 1;
     overflow: hidden;
     transition: .5s;
+    gap: 10px;
 }
 
 .home-sci a:hover{
@@ -274,6 +275,11 @@ section{
 
 .home-sci a:hover::before{
     width: 100%;
+}
+
+.resumeHover{
+   font-size: 0.7rem;
+   transform: translateX(-10px);
 }
 
 /* about */
